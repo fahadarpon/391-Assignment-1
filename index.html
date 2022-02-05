@@ -19,7 +19,7 @@
        <section>
         <div class="topnav">
             
-            <a href="#home">Home</a>
+            <a href="">Home</a>
             <a href="#about">About</a>
             <a href="#hobbies">Hobbies</a>
             <h3 class="port"><i class="fas fa-smile-beam"></i>Fahads Portfolio</h3>
@@ -33,7 +33,7 @@
     <!-- header ends -->
     <!-- main stars  -->
     <main>
-        <section class="about-me">
+        <section id="about" class="about-me">
             <div class="info-1">
                 <h1><span class="chocolate-color">About Me</span></h1>
                 <p>Hello I am fahad faisal arpan,I am 22 years old and currently a final year computer science student.Currently i am studying at <a href="https://www.bracu.ac.bd/" target="_blank"><b>BRAC University</b></a>. This semester i am also doing <a href="https://piazza.com/class/kyzuq0kk9r460x" target="_blank"><b>CSE 391</b></a>.I am also working as a senior executive of human resources of <a href="https://www.facebook.com/BRACUCC" target="_blank"><b>BRAC University Computer Club</b> </a>,My College was <a href="https://www.dhakacitycollege.edu.bd/" target="_blank"><b>Dhaka City College</b></a>. My Home District is Dhaka,Dohar</p>
@@ -43,7 +43,7 @@
                </div>
            </section>
 
-           <section class="about-hobbies">
+           <section id="hobbies" class="about-hobbies">
             <div class="info-2">
                 <img src="391-images/image-2.jpg" alt="">
             </div>
@@ -129,7 +129,21 @@
     </main>
     <!-- main ends  -->
 </body>
-<footer class="for-footer">
-    <p>copyright <span> &#169</span> All Rights Reserved </p>
+<footer class="footer">
+
+    <script>
+        window.onload = () => {
+            fetch(document.location.href)
+                .then(res => {
+                    const last_edit = res.headers.get("last-modified")
+                    document.getElementById("js").innerHTML = "Last Modified: " + last_edit
+                })
+        }
+    </script>
+
+    <p>391 Assignment One | Arpan | 19101472</p> 
+
+    <p id="js"></p>
+
 </footer>
 </html>
