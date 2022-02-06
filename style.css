@@ -93,7 +93,7 @@ h1{
 .info-2 img:hover{
   color: black ;
   background-color:lightgray  ;
-  transform: scale(1.2);
+  transform: scale(0.5);
   transition: transform 1s ease-in-out
 }
 
